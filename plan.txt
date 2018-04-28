@@ -1,0 +1,25 @@
+Здравей,
+
+Прегледах материалите и мисля че, както ти каза, ще са ми полезни като источник на идеи, но не мисля да ги следвам като цяло.
+
+Първоначалният ми план за 64-те часа на курса е горе-долу следния (на блокове по 4 часа):
+
+1 Intro
+2 Python syntax
+3 Python syntax
+4 Algorithms, data structures, complexity
+5 Python syntax
+6 Python syntax
+7 Python syntax
+8 PyGame
+9 Python syntax
+10 Python syntax
+11 Advanced python syntax
+12 Internet protocols
+13 Web intro
+14 Web intro
+15 DB intro
+16 Tools & libraries quick survey
+
+Предполагам че времето отделяно на различните теми ще се променя в зависимост от нивото на хората.
+
