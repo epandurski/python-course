@@ -1,4 +1,4 @@
-# Asks for a name, then tells if the name contains the letter 'a'.
+# Пита за име, след което казва дали името съдържа латинската буква 'a'.
 
 name = input('Enter a name: ')
 i = 0
