@@ -1,3 +1,11 @@
+# Wikipedia: In mathematics, a function is originally the idealization
+#            of how a varying quantity depends on another
+#            quantity. For example, the position of a planet is a
+#            function of the time.
+#
+# >>> from math import cos
+
+
 def get_year_of_birth(person):
     """Return the year of birth of some famous persons."""
 
@@ -14,7 +22,10 @@ def get_year_of_birth(person):
 
 
 def fib1(n):
-    """Print a Fibonacci series up to n."""
+    """Print a Fibonacci series up to `n`.
+
+    This is a function with "side effects".
+    """
 
     a, b = 0, 1
     while a < n:
@@ -24,6 +35,11 @@ def fib1(n):
 
 
 def fib2(n):
+    """Return Fibonacci series up to `n` as a list.
+
+    This is a "pure function".
+    """
+
     result = []
     a, b = 0, 1
     while a < n:
