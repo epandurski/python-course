@@ -1,4 +1,6 @@
 def get_year_of_birth(person):
+    """Return the year of birth of some famous persons."""
+
     if person == 'Isaac Newton':
         return 1642
     elif person == 'Marie Curie':
