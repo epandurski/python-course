@@ -183,5 +183,6 @@ Python е много популярен, съвременен, интерпре�
 
 4. <https://github.com/epandurski/python-course>
 
+    * exercises.pdf
     * tutorial.pdf 
     * tutorial_BG_2.0.pdf
