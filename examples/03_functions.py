@@ -22,6 +22,20 @@ def get_year_of_birth(person):
 
 
 def fib1(n):
+    """Return Fibonacci series up to `n` as a list.
+
+    This is a "pure function".
+    """
+
+    result = []
+    a, b = 0, 1
+    while a < n:
+        result.append(a)
+        a, b = b, a + b
+    return result
+
+
+def fib2(n):
     """Print a Fibonacci series up to `n`.
 
     This is a function with "side effects".
@@ -34,15 +48,5 @@ def fib1(n):
     return 'successfully done'
 
 
-def fib2(n):
-    """Return Fibonacci series up to `n` as a list.
-
-    This is a "pure function".
-    """
-
-    result = []
-    a, b = 0, 1
-    while a < n:
-        result.append(a)
-        a, b = b, a + b
-    return result
+def get_integer(prompt='Enter a number: '):
+    return int(input(prompt))

@@ -179,7 +179,9 @@ Python е много популярен, съвременен, интерпре�
 
 2. <https://python.org/>
 
-3. <https://github.com/epandurski/python-course>
+3. <http://thonny.org/>
+
+4. <https://github.com/epandurski/python-course>
 
     * tutorial.pdf 
     * tutorial_BG_2.0.pdf
