@@ -2,3 +2,4 @@
 slides.pdf
 docs-pdf/
 **/__pycache__
+.venv
