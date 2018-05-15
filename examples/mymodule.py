@@ -15,3 +15,7 @@ def ask_for_devils_number():
         _show_devils_number()
     else:
         print('Correct!')
+
+
+if __name__ == '__main__':
+    print('I am being executed as a program!')
