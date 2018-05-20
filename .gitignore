@@ -3,3 +3,5 @@ slides.pdf
 docs-pdf/
 **/__pycache__
 .venv
+.dir-locals.el
+TAGS
