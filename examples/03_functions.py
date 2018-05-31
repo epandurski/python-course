@@ -21,32 +21,96 @@ def get_year_of_birth(person):
         return None
 
 
-def fib1(n):
-    """Return Fibonacci series up to `n` as a list.
+def calculate_pi():
+    """A function without parameters."""
+
+    return 3.14159265
+
+
+def get_integer(prompt='Enter a number: '):
+    """A function with given default value for its parameter."""
+
+    return int(input(prompt))
+
+
+def double(x):
+    """Return the parameter multiplied by 2.
 
     This is a "pure function".
+
+    Variables defined within the function exist only while the
+    function is running. They "disappear" after the function is done.
     """
 
-    result = []
-    a, b = 0, 1
-    while a < n:
-        result.append(a)
-        a, b = b, a + b
+    result = 2 * x
     return result
 
 
-def fib2(n):
-    """Print a Fibonacci series up to `n`.
+def double2(x):
+    """Print the parameter multiplied by 2.
 
     This is a function with "side effects".
     """
 
-    a, b = 0, 1
-    while a < n:
-        print(a)
-        a, b = b, a + b
-    return 'successfully done'
+    print(2 * x)
+
+    # if "return" is missing, returns `None`.
 
 
-def get_integer(prompt='Enter a number: '):
-    return int(input(prompt))
+double(10)
+
+
+######################################
+#             Advanced               #
+######################################
+
+get_integer2 = get_integer  # `get_integer2` becomes an alias to `get_integer`.
+
+
+def apply(fn, value):
+    """A function that accepts other function as a parameter."""
+
+    return fn(value)
+
+
+def trigonometry_func(kind):
+    """A function that returns another function."""
+
+    import math
+    if kind == 'sinus':
+        return math.sin
+    else:
+        return math.cos
+
+
+def create_multiply_function(multiply_by):
+    """A function that defines another function and returns it."""
+
+    def multiply(x):
+        return multiply_by * x
+    return multiply
+
+
+def print_tuple(*args):
+    """A function that accepts any number of parameters and prints them."""
+
+    print(args)
+
+
+def print_dict(**kwargs):
+    """A function that accepts any keyword arguments and prints them."""
+
+    print(kwargs)
+
+
+def find_longest_word(first, *rest):
+    """A function that accepts at least one (or more) parameters."""
+
+    words = (first,) + rest
+    return max([len(word) for word in words])
+
+
+def create_dict(*args, **kwargs):
+    """A function that passes all its received parameters to another function."""
+
+    return dict(*args, **kwargs)
