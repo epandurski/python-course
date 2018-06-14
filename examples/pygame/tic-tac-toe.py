@@ -135,7 +135,7 @@ class TicTacToeGame:
                 pygame.quit()
                 sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-                game.process_mouse_click(*event.pos)
+                self.process_mouse_click(*event.pos)
 
 
 game = TicTacToeGame()
