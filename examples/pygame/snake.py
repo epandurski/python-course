@@ -26,7 +26,7 @@ RIGHT = (1, 0)
 
 
 def draw_box(surf, color, pos):
-    r = pygame.Rect((pos[0], pos[1]), (GRIDSIZE, GRIDSIZE))
+    r = pygame.Rect(pos, (GRIDSIZE, GRIDSIZE))
     pygame.draw.rect(surf, color, r)
 
 
@@ -114,5 +114,5 @@ if __name__ == '__main__':
         textpos.centerx = 20
         screen.blit(text, textpos)
 
-        pygame.display.update()
+        pygame.display.flip()
         clock.tick(FPS + snake.length / 3)
