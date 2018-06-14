@@ -227,17 +227,28 @@ Python е много популярен, съвременен, интерпре�
 
 # PyGame
 
-* <http://www.pygame.org/>
-
 * Библиотека за писане на 2D игри на Питон
+
+* <http://www.pygame.org/>
 
 * Използва библиотеката SDL <http://www.libsdl.org/>
 
 * Hardware Accelerated Graphics
 
-* Graphical User Interface (GUI), особености, event loop
+    - framebuffer
+    - drawing, "bit blit"
+
+* Graphical User Interface (GUI)
+
+    - windowing system
+    - compositing
+    - spirtes
+    - event loop
 
 * Примери
+
+    - pdb
+    - pudb
 
 
 # Мрежови протоколи
