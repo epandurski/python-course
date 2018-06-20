@@ -304,6 +304,7 @@ TCP ни гарантира:
 затваряме TCP и UDP конекции, както и да изпращаме и получаваме
 инфорамция по тях.
 
+* <https://docs.python.org/3/howto/sockets.html>
 * Труден за ползване.
 * Формата в който се изпращат и получават съобщенията е отговорност на
   програмиста.
@@ -320,64 +321,93 @@ TCP ни гарантира:
 ![Simple Mail Transfer Protocol](img/smtp-example.jpg){height=50%}
 
 
-# Web servers
+# Мрежови протоколи
 
-![HTTP е основният Web протокол](img/client-server.png){height=60%}
+![HTTP е протоколът по който браузърите си "говорят" със сайтовете в
+Интернет.](img/client-server.png){height=60%}
 
-# Web servers
 
-![Най-често сайтовете използват повече от един сървър.](img/client-server2.png){height=60%}
+# Мрежови протоколи
+
+![HTTPS е HTTP "пуснат" по криптиран канал.](img/http-stack.jpeg)
+
+
+# Мрежови протоколи
+
+Стандартната библиотека на Питон включва модули за работа с всички
+основни интернет протоколи.
+
+* DNS -- `socket.gethostbyname('google.com')`
+* [smtplib](https://docs.python.org/3/library/smtplib.html)
+* [smtpd](https://docs.python.org/3/library/smtpd.html)
+* [email](https://docs.python.org/3/library/email.html)
+* [http](https://docs.python.org/3/library/http.html)
+* [ssl](https://docs.python.org/3/library/ssl.html)
+* [urllib](https://docs.python.org/3/library/urllib.html)
+* [ipaddresses](https://docs.python.org/3/library/ipaddress.html)
+* [ftplib](https://docs.python.org/3/library/ftplib.html)
+
+
+# The World Wide Web (WWW)
+
+![WWW е "екосистема" от
+Web-стандарти.](img/www-layers.png){height=55%}
+
+
+# The World Wide Web (WWW)
+
+![Различните "Web" ресурси се адресират с
+URL-и.](img/fetching-a-page.png){height=55%}
+
 
 # HTML
 
-* История
+> Hypertext Markup Language (HTML) is the standard markup language for
+> creating web pages and web applications. With Cascading Style Sheets
+> (CSS) and JavaScript, it forms a triad of cornerstone technologies
+> for the World Wide Web.
 
-    <https://www.w3.org/People/Raggett/book4/ch02.html>
+* [История](<https://www.w3.org/People/Raggett/book4/ch02.html>)
 
-* Въведение
-
-    <https://www.w3schools.com/html/>
-
-* Пример
+* Въведение и примери
 
     <http://www.columbia.edu/~fdc/sample.html>
-
-* Forms
-
+    <https://www.w3schools.com/html/default.asp>
     <https://www.w3schools.com/html/html_forms.asp>
+
+* [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/)
+
 
 # CSS
 
-* Въведение
+> Cascading Style Sheets (CSS) is a style sheet language used for
+> describing the presentation of a document written in a markup
+> language like HTML. CSS is a cornerstone technology of the World
+> Wide Web, alongside HTML and JavaScript.
+
+* Въведение и примери
 
     <https://www.w3schools.com/css/default.asp>
 
-* Mozilla
-
-    <https://developer.mozilla.org/en-US/>
 
 # Javascript
 
-* Въведение
+> JavaScript is a high-level, interpreted programming
+> language. Alongside HTML and CSS, JavaScript is one of the three
+> core technologies of the World Wide Web. JavaScript enables
+> interactive web pages and thus is an essential part of web
+> applications. The vast majority of websites use it, and all major
+> web browsers have a dedicated JavaScript engine to execute it.
+
+* Въведение и примери
 
     <https://www.w3schools.com/js/default.asp>
-
-* DOM
-
     <https://www.w3schools.com/js/js_htmldom.asp>
 
-* AJAX
-
-    <https://www.w3schools.com/js/js_ajax_intro.asp>
-
-* Днешните браузъри са сложни
-
-    <https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/>
-
-
-# HTTP
-
-![](img/http-stack.jpeg)\
+* [Днешните браузъри са
+  сложни](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+    
+* [Single Page Applications](https://en.wikipedia.org/wiki/Single-page_application)
 
 
 # HTTP
@@ -385,17 +415,17 @@ TCP ни гарантира:
 ![](img/http-request.png)\
 
 
-# HTTP
+# HTTP Request
 
 ![](img/http-request-example.png)\
 
 
-# HTTP
+# HTTP Response
 
 ![](img/http-response-example.png)\
 
 
-# HTTP
+# HTTP Example
 
 ```
 $ telnet google.com 80
@@ -405,35 +435,37 @@ Escape character is '^]'.
 GET /
 ```
 
+```
+$ python3 -m http.server
+```
 
-# HTTP
+
+# Какво ни дава HTTP?
 
 ![Content type negotiation](img/http-accept.jpg)
 
 
-# HTTP
-
-![Cookies](img/http-cookie.png)
-
-
-# HTTP
+# Какво ни дава HTTP?
 
 ![Authentication](img/http-authentication.png)
 
 
-# HTTP
+# Какво ни дава HTTP?
+
+![Cookies](img/http-cookie.png)
+
+
+# Какво ни дава HTTP?
 
 ![Caching](img/http-caching-expires.png)
 
 
 
-# HTTP
-
-* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview>
+# Какво ни дава HTTP?
 
 * <https://www.httpwatch.com/httpgallery/introduction/>
 
-* `$ python3 -m http.server`
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview>
 
 
 # Databases
@@ -451,10 +483,11 @@ GET /
     - [Non-relational databases (redis,
       MongoDB)](https://en.wikipedia.org/wiki/NoSQL)
 
-* [SQL](https://en.wikipedia.org/wiki/SQL) --
-  <https://www.w3schools.com/sql/sql_intro.asp>
-
 * PostgreSQL, MySQL, SQL Server, Oracle
+
+* [SQL](https://en.wikipedia.org/wiki/SQL)
+
+    <https://www.w3schools.com/sql/sql_intro.asp>
 
 * SQLite examples
 
@@ -467,4 +500,4 @@ GET /
 > so you can focus on writing your app without needing to reinvent the
 > wheel. It’s free and open source.
 
-<https://docs.djangoproject.com/en/2.0/intro/tutorial01/>
+* <https://docs.djangoproject.com/en/2.0/intro/tutorial01/>
