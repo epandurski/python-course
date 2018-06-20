@@ -433,6 +433,8 @@ GET /
 
 * <https://www.httpwatch.com/httpgallery/introduction/>
 
+* `$ python3 -m http.server`
+
 
 # Databases
 
