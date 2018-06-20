@@ -1,0 +1,10 @@
+select * from albums al inner join artists ar on al.artistid=ar.artistid where ar.name='Accept';
+
+.headers on
+.tables
+.schema
+
+select * from artists;
+select * from artists order by name;
+select * from artists where name like 'a%';
+insert into artists (artistid, name) values (275, 'Poduene Blus Band');

@@ -432,3 +432,17 @@ GET /
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview>
 
 * <https://www.httpwatch.com/httpgallery/introduction/>
+
+
+# Databases
+
+* ACID, transactions
+
+* PostgreSQL, MySQL, SQL Server, Oracle
+
+* SQL
+
+* <https://www.w3schools.com/sql/sql_intro.asp>
+
+* SQLite examples
+
