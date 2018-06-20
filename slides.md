@@ -436,13 +436,33 @@ GET /
 
 # Databases
 
-* ACID, transactions
+* A database is an ORGANIZED collection of data, stored and accessed
+  electronically.
+
+* Database theory
+
+    - [ACID -- Atomicity, Consistency, Isolation,
+      Durability](https://en.wikipedia.org/wiki/ACID)
+
+    - [Relational databases](https://en.wikipedia.org/wiki/Relational_model)
+
+    - [Non-relational databases (redis,
+      MongoDB)](https://en.wikipedia.org/wiki/NoSQL)
+
+* [SQL](https://en.wikipedia.org/wiki/SQL) --
+  <https://www.w3schools.com/sql/sql_intro.asp>
 
 * PostgreSQL, MySQL, SQL Server, Oracle
 
-* SQL
-
-* <https://www.w3schools.com/sql/sql_intro.asp>
-
 * SQLite examples
 
+
+# Django
+
+> Django is a high-level Python Web framework that encourages rapid
+> development and clean, pragmatic design. Built by experienced
+> developers, it takes care of much of the hassle of Web development,
+> so you can focus on writing your app without needing to reinvent the
+> wheel. It’s free and open source.
+
+<https://docs.djangoproject.com/en/2.0/intro/tutorial01/>
