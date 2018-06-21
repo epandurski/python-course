@@ -470,26 +470,70 @@ $ python3 -m http.server
 
 # Databases
 
-* A database is an ORGANIZED collection of data, stored and accessed
-  electronically.
+> A database is an ORGANIZED collection of data, stored and accessed
+> electronically.
 
-* Database theory
+* hierarchical databases
+* key-value stores
+* object databases
+* document databases
+* relational databases (the most flexible, the most complex)
 
-    - [ACID -- Atomicity, Consistency, Isolation,
-      Durability](https://en.wikipedia.org/wiki/ACID)
 
-    - [Relational databases](https://en.wikipedia.org/wiki/Relational_model)
+# Databases
 
-    - [Non-relational databases (redis,
-      MongoDB)](https://en.wikipedia.org/wiki/NoSQL)
+* [Database theory](https://en.wikipedia.org/wiki/Database_theory)
 
-* PostgreSQL, MySQL, SQL Server, Oracle
+* [ACID](https://en.wikipedia.org/wiki/ACID)
+
+    - atomicity
+    - consistency
+    - isolation
+    - durability
+
+
+# Databases
+
+* [Non-relational (NoSQL) databases: redis,
+  MongoDB](https://en.wikipedia.org/wiki/NoSQL)
+
+    - excellent scalability
+    - non-ACID
+
+* [Relational databases: PostgreSQL, MariaDB/MySQL, SQL Server,
+  Oracle](https://en.wikipedia.org/wiki/Relational_model)
+
+    - tables (relations)
+    - structured query language
+    - transactions, write ahead log, memory buffers
+    - concurrency, locking, multi-version concurrency control
+    - backup, replication
+    - scaling, tablespaces, sharding
+    - indexes, full text search
+    - stored procedures, triggers, views
+
+
+# Databases
 
 * [SQL](https://en.wikipedia.org/wiki/SQL)
 
     <https://www.w3schools.com/sql/sql_intro.asp>
 
-* SQLite examples
+* [SQLite examples](https://www.sqlite.org/index.html)
+
+    - database client
+    - database schema
+    - primary key
+    - foreign key
+    - one-to-one, one-to-many, many-to-many relationships
+    - queries
+    - insert, update, delete
+    - database constraints
+    - joins
+    - indexes, execution plan
+    - transaction isolation
+
+* [Object Relational Mappers](https://docs.djangoproject.com/en/2.0/topics/db/queries/)
 
 
 # Django
