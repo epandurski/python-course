@@ -470,6 +470,12 @@ $ python3 -m http.server
 
 # Databases
 
+![Базата данни е в "центъра" на почти всяко бизнес
+приложение.](img/client-server2.png)
+
+
+# Databases
+
 > A database is an ORGANIZED collection of data, stored and accessed
 > electronically.
 
