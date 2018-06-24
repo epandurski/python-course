@@ -483,6 +483,7 @@ $ python3 -m http.server
 * key-value stores
 * object databases
 * document databases
+* graph databases
 * relational databases (the most flexible, the most complex)
 
 
@@ -509,7 +510,7 @@ $ python3 -m http.server
 * [Relational databases: PostgreSQL, MariaDB/MySQL, SQL Server,
   Oracle](https://en.wikipedia.org/wiki/Relational_model)
 
-    - tables (relations)
+    - tables (relations), schema
     - structured query language
     - transactions, write ahead log, memory buffers
     - concurrency, locking, multi-version concurrency control
@@ -551,3 +552,225 @@ $ python3 -m http.server
 > wheel. It’s free and open source.
 
 * <https://docs.djangoproject.com/en/2.0/intro/tutorial01/>
+
+
+# Алгоритми
+
+Ако имаме два алгоритъма за решаване на една задача, как решаваме кой
+от тях е по-добър?
+
+  * време за изпълнение
+  * използвана памет
+  * може би на практика няма значение?
+  * зависи ли от входните данни?
+
+
+# Алгоритми
+
+## Пример 1а: Намерете сумата на числата от 1 до n.
+
+```python
+def calc_sum_up_to(n):
+    s = 0
+    for x in range(1, n + 1):
+        s += x
+    return s
+```
+
+## Time complexity:
+
+`O(n)`
+
+## Space complexity:
+
+`O(1)`
+
+
+# Алгоритми
+
+## Пример 1б: Намерете сумата на числата от 1 до n.
+
+```python
+def calc_sum_up_to(n):
+    return n * (n + 1) / 2
+```
+
+## Time complexity:
+
+`O(1)`
+
+## Space complexity:
+
+`O(1)`
+
+
+# Алгоритми
+
+## Пример 2а: Определете дали дадено число `x` се съдържа в подреденият списък от числа `SORTED_LIST`.
+
+```python
+def occurs_in_list(x):
+    for element in SORTED_LIST:
+        if x == element:
+            return True
+    return False
+```
+
+## Time complexity (n = len(SORTED_LIST)):
+
+* Best case: 1  изпълнение на тялото на цикъла
+* Worst case: `n` изпълнения на тялото на цикъла
+* Average case: неизвестно, зависи от честотата на поява на различните
+  възможни стойности за `x`
+
+`O(n)`
+
+
+# Алгоритми
+
+## Пример 2б: Определете дали дадено число `x` се съдържа в подреденият списък от числа `SORTED_LIST`.
+
+```python
+def occurs_in_list(x, arr=SORTED_LIST):
+    if len(arr) == 0:
+        return False
+    center = len(arr) // 2
+    center_value = arr[center]
+    if x == center_value:
+        return True
+    if x > center_value:
+        return occurs_in_list(x, arr[center + 1:])
+    if x < center_value:
+        return occurs_in_list(x, arr[:center])
+```
+
+
+# Алгоритми
+
+## Пример 2б:
+
+Често определянето на това колко пъти ще се изпълни даден цикъл не
+проста задача и изисква по-задълбочен анализ.  В този случай
+обикновено се изследва т.н. асимптотично поведение.
+
+## Time complexity:
+
+`O(log(n))`
+
+## Space complexity:
+
+`O(n)`
+
+
+
+# Алгоритми
+
+## Пример 2в: Определете дали дадено число `x` се съдържа в подреденият списък от числа `SORTED_LIST`.
+
+```python
+def occurs_in_list(x, left=0, right=len(SORTED_LIST)):
+    if left == right:
+        return False
+    center = (left + right) // 2
+    center_value = SORTED_LIST[center]
+    if x == center_value:
+        return True
+    if x > center_value:
+        return occurs_in_list(x, center + 1, right)
+    if x < center_value:
+        return occurs_in_list(x, left, center)
+```
+
+## Space complexity:
+
+`O(log(n))`
+
+
+# Алгоритми
+
+## Пример 3: Sorting
+
+* [Bubble sort](https://www.studytonight.com/data-structures/bubble-sort) -- O(n**2)
+* [Selection sort](https://www.studytonight.com/data-structures/selection-sorting) -- O(n**2)
+* [Insertion sort](https://www.studytonight.com/data-structures/insertion-sorting) -- O(n**2), stable, adaptive
+* [Merge sort](https://www.studytonight.com/data-structures/merge-sort) -- O(n * log(n)), stable
+* [Quick sort](https://www.studytonight.com/data-structures/quick-sort) -- O(n * log(n))
+* [Heap sort](https://www.studytonight.com/data-structures/heap-sort) -- O(n * log(n)), in-place
+* [Timsort](https://en.wikipedia.org/wiki/Timsort) -- O(n * log(n)), stable, almost in-place, adaptive
+
+
+# Алгоритми
+
+## Merge Sort
+
+```python
+def mergesort(arr, left=0, right=None):
+    if right is None:
+        right = len(arr) - 1
+    if left < right:
+        center = (left + right) // 2
+        mergesort(arr, left, center)
+        mergesort(arr, center + 1, right)
+        merge(arr, left, center, right)
+```
+
+
+# Алгоритми
+
+## Merge Sort
+
+```python
+def merge(arr, left, center, right):
+    n_left, n_right = center - left + 1, right - center
+    L = [arr[left + i] for i in range(n_left)]
+    R = [arr[center + 1 + j] for j in range(n_right)]
+    i, j, k = 0, 0, left  # initial indexes
+    while i < n_left and j < n_right:
+        if L[i] <= R[j]:
+            arr[k] = L[i]; i += 1
+        else:
+            arr[k] = R[j]; j += 1
+        k += 1
+    while i < n_left:
+        arr[k] = L[i]; i += 1; k += 1
+    while j < n_right:
+        arr[k] = R[j]; j += 1; k += 1
+```
+
+
+# Алгоритми
+
+## Как да пишем алгоритми които работят достатъчно бързо:
+
+* Не извършвайте една операция повече пъти отколкото е
+  необходимо. Най-добре е ако можете да измислите как въобще да не
+  извършвате дадената операция. Преценете дали е обосновано да
+  запомняте резултата за да може да го използвате в бъдеще наготово
+  (caching).
+
+* Изследвайте поведението на алгоритъма в екстремните случаи. Оценете
+  колко често ще попадате в тях и доколко това ще предизвиква проблеми
+  на практика.
+
+* Не влагайте повече усилия в оптимизация от необходимото. Често
+  най-простото решение е достатъчно бързо. Преди да започнете да
+  усложнявате кода си за да го направите по-бърз, уверете се че
+  причината за забавянето е наистина тази която си мислите. Направете
+  измервания.
+
+
+# Структури от данни
+
+> In computer science, a data structure is a data organization and
+> storage format that enables efficient access and modification. More
+> precisely, a data structure is a collection of data values, the
+> relationships among them, and the functions or operations that can
+> be applied to the data.
+
+## Intro
+
+* <https://medium.com/swlh/introduction-to-data-structures-9134b7d064a6>
+* dict (hash map)
+* list (dynamically sized vector)
+* deque
+* heapq
