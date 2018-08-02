@@ -24,3 +24,16 @@ def rev(data):
         yield data[index]
         print('after yielding')
     print('finished')
+
+
+class Dog:
+    def __init__(self, name):
+        self.name = name
+        self.tricks = []
+
+    def add_trick(self, trick):
+        self.tricks.append(trick)
+
+    def __iter__(self):
+        for trick in self.tricks:
+            yield trick
