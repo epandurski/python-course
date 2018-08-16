@@ -356,8 +356,81 @@ Web-стандарти.](img/www-layers.png){height=55%}
 
 # The World Wide Web (WWW)
 
+![На една web-страница може да има съдържание ("ресурси") идващо от
+много различни сървъри.](img/fetching-a-page.png){height=55%}
+
+
+# The World Wide Web (WWW)
+
 ![Различните "Web" ресурси се адресират с
-URL-и.](img/fetching-a-page.png){height=55%}
+URL-и.](img/url-structure.png){height=55%}
+
+
+# HTTP
+
+![](img/http-request.png)\
+
+
+# HTTP Example
+
+```
+$ telnet google.com 80
+Trying 216.58.209.14...
+Connected to google.com.
+Escape character is '^]'.
+GET /
+```
+
+```
+$ cd python-course/examples/html
+$ python3 -m http.server
+$ firefox http://localhost:8000/page_demo.html
+```
+
+
+# HTTP Request
+
+![](img/http-request-example.png)\
+
+
+# HTTP Response
+
+![](img/http-response-example.png)\
+
+
+# Какво ни дава HTTP?
+
+![Content type negotiation, MIME types](img/http-accept.jpg)
+
+
+# Какво ни дава HTTP?
+
+![Authentication](img/http-authentication.png)
+
+
+# Какво ни дава HTTP?
+
+![Cookies](img/http-cookie.png)
+
+
+# Какво ни дава HTTP?
+
+![Caching](img/http-caching-expires.png)
+
+# Какво ни дава HTTP?
+
+![Proxy servers](img/http-proxy.png)
+
+# Какво ни дава HTTP?
+
+![](img/http-methods.jpg)\
+
+
+# Какво ни дава HTTP?
+
+* <https://www.httpwatch.com/httpgallery/introduction/>
+
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview>
 
 
 # HTML
@@ -406,66 +479,8 @@ URL-и.](img/fetching-a-page.png){height=55%}
 
 * [Днешните браузъри са
   сложни](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
-    
+
 * [Single Page Applications](https://en.wikipedia.org/wiki/Single-page_application)
-
-
-# HTTP
-
-![](img/http-request.png)\
-
-
-# HTTP Request
-
-![](img/http-request-example.png)\
-
-
-# HTTP Response
-
-![](img/http-response-example.png)\
-
-
-# HTTP Example
-
-```
-$ telnet google.com 80
-Trying 216.58.209.14...
-Connected to google.com.
-Escape character is '^]'.
-GET /
-```
-
-```
-$ python3 -m http.server
-```
-
-
-# Какво ни дава HTTP?
-
-![Content type negotiation](img/http-accept.jpg)
-
-
-# Какво ни дава HTTP?
-
-![Authentication](img/http-authentication.png)
-
-
-# Какво ни дава HTTP?
-
-![Cookies](img/http-cookie.png)
-
-
-# Какво ни дава HTTP?
-
-![Caching](img/http-caching-expires.png)
-
-
-
-# Какво ни дава HTTP?
-
-* <https://www.httpwatch.com/httpgallery/introduction/>
-
-* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview>
 
 
 # Databases
