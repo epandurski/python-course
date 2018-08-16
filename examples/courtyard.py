@@ -118,9 +118,9 @@ class Fence:
             return abs(b_v)
 
         # Calculate the distance to the nearest point on the line.
-        norlmal_to_a_b = a_b.rotate90()
-        norlmal_to_a_b /= abs(norlmal_to_a_b)
-        return abs(a_v * norlmal_to_a_b)
+        normal_to_a_b = a_b.rotate90()
+        normal_to_a_b /= abs(normal_to_a_b)
+        return abs(a_v * normal_to_a_b)
 
 
 class Post:
