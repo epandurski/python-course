@@ -789,3 +789,75 @@ def merge(arr, left, center, right):
 * list (dynamically sized vector)
 * deque
 * heapq
+
+
+# Source control
+
+![Писането на софтуер представлява неспирен поток от последователни,
+малки подобрения.](img/scm-diff.png)
+
+
+# Source control
+
+![Писането на софтуер представлява неспирен поток от последователни,
+малки подобрения.](img/scm-versioning.png)
+
+
+# Source control
+
+![В писането на сложен софтуер най-често участват няколко човека
+едновременно. (Centralized repository)](img/scm.png){height=55%}
+
+
+# Source control
+
+![В писането на сложен софтуер най-често участват няколко човека
+едновременно. (Many
+repositories)](img/scm-distributed.png){height=55%}
+
+
+# Source control
+
+![Всеки работещ по проекта има собствено "repository" и "working
+copy(s)".](img/scm-working-copy.png){height=55%}
+
+
+# Source control
+
+![Работещите по проекта могат да променят файлове независимо един от
+друг. Понякога това води до "конфликти". Намирането и разрешаването на
+конфликтите става чрез "merging". Ако няма очевидни конфликти, megre-а
+не изисква допълнителна човешка
+намеса.](img/scm-branches.jpg){height=55%}
+
+
+# Source control
+
+![За различните "разклонения" по които се работи в един проект се
+правят отделни "branches".](img/scm-branch-tree.png){height=55%}
+
+
+# Git
+
+![](img/git-joke.png)\
+
+
+# Git
+
+![Основни команди (плюс "git status", "git
+diff")](img/git-commit.png){height=60%}
+
+
+# Git
+
+![](img/git-cheatsheet.png)\
+
+
+
+
+
+
+
+
+
+
