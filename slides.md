@@ -853,11 +853,6 @@ diff")](img/git-commit.png){height=60%}
 ![](img/git-cheatsheet.png)\
 
 
+# Advanced python syntax
 
-
-
-
-
-
-
-
+![decorators, context managers](img/exploding-brain.jpg){height=55%}
