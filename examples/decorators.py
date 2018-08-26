@@ -1,3 +1,4 @@
+import math
 from contextlib import contextmanager
 
 
@@ -10,20 +11,25 @@ class Rectangle:
     def area(self):
         return self.width * self.height
 
+    @area.setter
+    def area(self, a):
+        self.width = self.height = math.sqrt(a)
+
     def calc_area(self):
         return self.width * self.height
 
     @staticmethod
-    def get_name():
-        return 'Rectangle'
+    def print_name():
+        print('Rectangle')
 
     @classmethod
-    def get_class(cls):
-        print(cls)
+    def print_class(cls):
+        print(cls.__name__)
 
 
 class Square(Rectangle):
-    pass
+    def __init__(self, width):
+        super().__init__(width, width)
 
 
 def print_debug_message_decorator(f):
