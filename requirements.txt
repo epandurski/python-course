@@ -9,7 +9,6 @@ Jinja2==2.10
 Mako==1.0.7
 MarkupSafe==1.0
 mysqlclient==1.3.13
-pkg-resources==0.0.0
 psycopg2==2.7.5
 pudb==2018.1
 pygame==1.9.3

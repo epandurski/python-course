@@ -33,6 +33,7 @@ def get_winner(board):
 def make_move(player, board):
     """Ask `player` to play a move on the `board`."""
 
+    assert player in [PLAYER_X, PLAYER_O]
     while True:
         field_name = input('On which field to put {}? '.format(player))
         try:
@@ -46,6 +47,7 @@ def make_move(player, board):
 
 
 def get_next_player(player):
+    assert player in [PLAYER_X, PLAYER_O]
     if player == PLAYER_X:
         return PLAYER_O
     return PLAYER_X
