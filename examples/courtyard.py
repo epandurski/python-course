@@ -54,13 +54,13 @@ class Courtyard:
 
         self.width = width
         self.height = height
-        self.objects = set()
+        self._objects = set()
 
         # Put a fence around the courtyard.
-        self.objects.add(Fence(0, 0, width, 0))
-        self.objects.add(Fence(width, 0, width, height))
-        self.objects.add(Fence(width, height, 0, height))
-        self.objects.add(Fence(0, height, 0, 0))
+        self._objects.add(Fence(0, 0, width, 0))
+        self._objects.add(Fence(width, 0, width, height))
+        self._objects.add(Fence(width, height, 0, height))
+        self._objects.add(Fence(0, height, 0, 0))
 
     def add_object(self, obj):
         """Add immovable object in the courtyard.
@@ -70,7 +70,7 @@ class Courtyard:
         (x, y) and the object.
         """
 
-        self.objects.add(obj)
+        self._objects.add(obj)
 
     def calc_min_distance(self, x, y):
         """Calculate the distance from point (x, y) to the nearest object."""
@@ -78,7 +78,7 @@ class Courtyard:
         assert x <= self.width
         assert y <= self.height
         return min(
-            [obj.calc_distance(x, y) for obj in self.objects],
+            [obj.calc_distance(x, y) for obj in self._objects],
             default=math.inf,
         )
 
