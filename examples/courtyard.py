@@ -1,6 +1,7 @@
 import math
 
 
+
 class Vector:
     """Two-dimensional vector."""
 
