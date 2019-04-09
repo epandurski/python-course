@@ -7,13 +7,13 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    @property
-    def area(self):
+    def get_area(self):
         return self.width * self.height
 
-    @area.setter
-    def area(self, a):
+    def set_area(self, a):
         self.width = self.height = math.sqrt(a)
+
+    area = property(get_area, set_area)
 
     def calc_area(self):
         return self.width * self.height

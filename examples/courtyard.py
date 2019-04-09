@@ -75,8 +75,8 @@ class Courtyard:
     def calc_min_distance(self, x, y):
         """Calculate the distance from point (x, y) to the nearest object."""
 
-        assert x <= self.width
-        assert y <= self.height
+        assert 0 <= x <= self.width
+        assert 0 <= y <= self.height
         return min(
             [obj.calc_distance(x, y) for obj in self._objects],
             default=math.inf,
