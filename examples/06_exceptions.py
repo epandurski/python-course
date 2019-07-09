@@ -6,7 +6,7 @@ class NotANumberError(Exception):
 
 
 class NonPositiveNumberError(Exception):
-    pass
+    """The number is not positive"""
 
 
 def get_integer(prompt='Enter a number: '):
