@@ -2,34 +2,26 @@ import math
 from contextlib import contextmanager
 
 
-class Rectangle:
-    def __init__(self, width, height):
+class Square:
+    def __init__(self, width):
         self.width = width
-        self.height = height
 
     def get_area(self):
-        return self.width * self.height
+        return self.width * self.width
 
     def set_area(self, a):
-        self.width = self.height = math.sqrt(a)
+        self.width = math.sqrt(a)
 
     area = property(get_area, set_area)
 
-    def calc_area(self):
-        return self.width * self.height
-
     @staticmethod
     def print_name():
-        print('Rectangle')
+        print('Square')
 
     @classmethod
     def print_class(cls):
         print(cls.__name__)
 
-
-class Square(Rectangle):
-    def __init__(self, width):
-        super().__init__(width, width)
 
 
 def print_debug_message_decorator(f):
@@ -39,16 +31,17 @@ def print_debug_message_decorator(f):
         return result
     return wrapper
 
-
 @print_debug_message_decorator
 def sq(x):
     return x * x
-
 
 # # This is equivalent to the previous
 # def sq(x):
 #     return x * x
 # sq = print_debug_message_decorator(sq)
+
+print('sq({}) = {}'.format(5, sq(5)))
+
 
 
 @contextmanager
@@ -59,9 +52,7 @@ def open_for_write(filename):
     f.close()
     print('closed')
 
-
-print('sq({}) = {}'.format(5, sq(5)))
-with open_for_write('ddd.txt') as f:
-    f.write('Hello!')
-    print('written')
-print('done')
+##with open_for_write('ddd.txt') as f:
+##    f.write('Hello!')
+##    print('written')
+##print('done')

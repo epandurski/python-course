@@ -1,18 +1,26 @@
-class Reverse:
-    """Iterator for looping over a sequence backwards."""
+class RevListIterator:
+    def __init__(self, l):
+        self.list = l
+        self.index = len(l) - 1
+        
+    def __next__(self):
+        if self.index < 0:
+            raise StopIteration
+        value = self.list[self.index]
+        self.index -= 1
+        return value
 
-    def __init__(self, data):
-        self.data = data
-        self.index = len(data)
+        
+class Dog:
+    def __init__(self, name):
+        self.name = name
+        self.tricks = []
+
+    def add_trick(self, trick):
+        self.tricks.append(trick)
 
     def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.index == 0:
-            raise StopIteration
-        self.index = self.index - 1
-        return self.data[self.index]
+        return RevListIterator(self.tricks)  # or `self.tricks`
 
 
 def rev(data):
@@ -26,7 +34,7 @@ def rev(data):
     print('finished')
 
 
-class Dog:
+class Dog2:
     def __init__(self, name):
         self.name = name
         self.tricks = []

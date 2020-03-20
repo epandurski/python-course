@@ -6,8 +6,7 @@ import random
 from pygame.locals import QUIT, KEYDOWN, K_UP, K_DOWN, K_RIGHT, K_LEFT
 
 pygame.init()
-clock = pygame.time.Clock()
-
+    
 SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 screen.fill((255, 255, 255))
@@ -30,7 +29,7 @@ def draw_box(surf, color, pos):
     pygame.draw.rect(surf, color, r)
 
 
-class Snake(object):
+class Snake:
     def __init__(self):
         self.lose()
         self.color = (0, 0, 0)
@@ -40,7 +39,7 @@ class Snake(object):
 
     def lose(self):
         self.length = 1
-        self.positions = [((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2))]
+        self.positions = [(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)]
         self.direction = random.choice([UP, DOWN, LEFT, RIGHT])
 
     def point(self, pt):
@@ -65,7 +64,7 @@ class Snake(object):
             draw_box(surf, self.color, p)
 
 
-class Apple(object):
+class Apple:
     def __init__(self):
         self.position = (0, 0)
         self.color = (255, 0, 0)
