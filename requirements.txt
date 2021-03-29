@@ -12,7 +12,7 @@ mysqlclient==1.3.13
 psycopg2==2.7.5
 pudb==2018.1
 pygame==1.9.3
-Pygments==2.2.0
+Pygments==2.7.4
 python-dateutil==2.7.3
 python-editor==1.0.3
 pytz==2018.5
