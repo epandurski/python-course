@@ -1,7 +1,7 @@
 alembic==1.0.0
 click==6.7
 CuriousORM==1.2.0
-Django==1.11.15
+Django==2.2.24
 Flask==1.0.2
 Flask-SQLAlchemy==2.3.2
 itsdangerous==0.24
